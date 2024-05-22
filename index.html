@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading time counting</title>
+
+    <style>
+
+.container {
+    width: 1000px;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li><a href="index.html">Lorem ipsum dolor sit amet, consectetur adipisicing.</a></li>
+        <li><a href="post-1.html">Lorem ipsum dolor sit amet, consectetur adipisicing.</a></li>
+        <li><a href="post-2.html">Lorem ipsum dolor sit amet, consectetur adipisicing.</a></li>
+        <li><a href="post-3.html">Lorem ipsum dolor sit amet, consectetur adipisicing.</a></li>
+        
+    </ul>
+
+    <div class="container" id="main-content">
+
+        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+        <h4> <span id="timeShow"></span> mins read</h4>
+
+        <img src="https://picsum.photos/500/350" alt="photo">
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, nostrum veniam! Temporibus voluptate exercitationem reiciendis numquam et tempora est explicabo vel, ipsa obcaecati veniam beatae illum fuga nihil nesciunt delectus cupiditate dignissimos necessitatibus similique illo amet? Harum cumque itaque, similique rerum doloremque vero quod libero in, earum tempora eveniet autem!
+        </p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, nostrum veniam! Temporibus voluptate exercitationem reiciendis numquam et tempora est explicabo vel, ipsa obcaecati veniam beatae illum fuga nihil nesciunt delectus cupiditate dignissimos necessitatibus similique illo amet? Harum cumque itaque, similique rerum doloremque vero quod libero in, earum tempora eveniet autem!
+        </p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, nostrum veniam! Temporibus voluptate exercitationem reiciendis numquam et tempora est explicabo vel, ipsa obcaecati veniam beatae illum fuga nihil nesciunt delectus cupiditate dignissimos necessitatibus similique illo amet? Harum cumque itaque, similique rerum doloremque vero quod libero in, earum tempora eveniet autem!similique rerum doloremque vero quod libero in, earum tempora eveniet autem!
+        </p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, nostrum veniam! Temporibus voluptate exercitationem reiciendis numquam et tempora est explicabo vel, ipsa obcaecati veniam beatae illum fuga nihil nesciunt delectus cupiditate dignissimos necessitatibus similique illo amet? Harum cumque itaque, similique rerum doloremque vero quod libero in, earum tempora eveniet autem!nihil nesciunt delectus cupiditate dignissimos necessitatibus similique illo amet? Harum cumque itaque, similique rerum doloremque vero quod libero in, earum tempora eveniet autem!
+        </p>
+
+    </div>
+
+    <script>
+        let mainContent = document.getElementById("main-content").innerHTML;
+        timeShow = document.getElementById("timeShow");
+
+        totalWord = mainContent.split(' ');
+
+        totalWordLength = totalWord.length;
+
+        totalReadingTime = totalWordLength/200;
+
+        totalReadingTimeFull = Math.ceil(totalReadingTime);
+
+        timeShow.innerHTML = totalReadingTimeFull;
+
+
+
+        // console.log(totalReadingTimeFull);
+
+    </script>
+
+
+
+    
+</body>
+</html>
